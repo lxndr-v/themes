@@ -1,0 +1,33 @@
+.widget{
+    .search-form{
+        padding-top: $widget-padding;
+        @extend %clearfix;
+        label{
+            width: calc(100% - 90px);
+            float: left;
+            padding-right: 5px;
+            input{
+                width: 100%;
+                height: 45px;
+                border-radius: 0;
+                padding: 0 15px;
+                border-color: $color_light_gray;
+    
+            }
+        }
+        .search-submit{
+            width: 90px;
+            height: 45px;
+            float: left;
+            font-size: 1rem;
+            border-radius: 0;
+            border: 0;
+            @extend %primary-bg;
+            cursor: pointer;
+            font-weight: $font_semi_bold;
+            padding: 0;
+        }
+    
+    }
+
+}

@@ -1,0 +1,78 @@
+.woocommerce{
+    .woocommerce-result-count{
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: $font_semi_bold;
+        @include media(md){
+            font-size: 20px;
+            word-spacing: 5px;
+        }
+    }
+    .woocommerce-ordering{
+        select{
+            padding: 10px 15px;
+            @include border(2px,solid);
+            border-color: $color_light_gray;
+        }
+
+    }
+    .products{
+        width: 100%;
+        .product{
+            margin-top: 30px;
+            margin-bottom: 0;
+            text-align: center;
+            img{
+                margin: 0 auto;
+            }
+            .woocommerce-LoopProduct-link{
+                position: relative;
+                display: block;
+                border: 0;
+                .onsale{
+                    position: absolute;
+                    top: 15px;
+                    right: 30px;
+                }
+                &:hover{
+                    color: $color_primary;
+                }
+
+
+            }
+            .onsale{
+                display: inline-block;
+                height: 60px;
+                width: 60px;
+                line-height: 56px;
+                font-size: 14px;
+                font-weight: $font_semi_bold;
+                background-color: $color_white;
+                @include border(2px,solid);
+                @extend %primary-border;
+                text-align: center;
+                border-radius: 100%;
+
+
+            }
+            .price{
+                font-weight: $font-semi-bold;
+            }
+            .button{
+                display: block; 
+                width: 100%;
+                @extend %primary-bg;
+                @include border(2px,solid);
+                @extend %primary-border;
+                padding: 10px 15px;
+                text-align: center;
+                font-weight: $font_semi_bold;
+                @include transition();
+                margin-top: 15px;
+                &:hover{
+                    background-color: $color_white;
+                }
+            }
+        }
+    }
+}

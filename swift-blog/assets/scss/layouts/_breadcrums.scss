@@ -1,0 +1,30 @@
+.#{$prefix}-breadcrumbs{
+    font-weight: $font_semi_bold;
+    padding: 30px;
+    @include media(md){
+        padding: 0 0 30px;
+    }
+    ul{
+        @extend %reset-ul;
+        @extend %clearfix;
+        li{
+            float: left;
+            padding: 0 60px 0 0;
+            position: relative;
+            &:after{
+                content: '\f054';
+                display:block;
+                font-family: fontAwesome;
+                position: absolute;
+                right: 23px;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

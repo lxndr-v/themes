@@ -1,0 +1,28 @@
+
+
+@import 'menu-layout';
+.#{$prefix}-mobile-menu-section{
+   position: fixed;
+   height: 100%;
+   z-index: 10;
+   top: 0;
+   bottom: 0;
+   left: -100%;
+   background-color: $color_secondary;
+   padding: 30px;
+   overflow-y: auto; 
+   transition: all 0.5s ease;
+   width: 100%;
+   
+   @include media(lg){
+       padding: 100px;
+   }
+
+   &.show{
+       left: 0;
+   }
+   .#{$prefix}-mobile-close-icon{
+       text-align: right;
+   }
+
+}

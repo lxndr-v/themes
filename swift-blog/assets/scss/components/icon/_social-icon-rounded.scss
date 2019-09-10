@@ -1,0 +1,19 @@
+.twp-social-icon-rounded{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    @include border(2px,solid);
+    line-height: 36px;
+    border-radius: 100%;
+    i{
+        @include transition();
+
+    }
+    &:hover{
+        i{
+            @include transform(scale(1.5));
+        }
+    }
+
+}

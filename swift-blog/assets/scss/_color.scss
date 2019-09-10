@@ -1,0 +1,39 @@
+
+
+a{
+    color: $color_black;
+    text-decoration: none;
+    @include border-bottom(2px,solid);
+    border-color: transparent;
+    @include transition();
+    &:visited{
+        color: $color_black;
+        border-color: $color_primary;
+    }
+    &:hover{
+        border-color: $color_primary;
+        color: $color_black;
+    }
+    &.twp-no-hover-effect{
+        &:hover{
+            color: $color_black;
+        }
+    }
+}
+a{
+    &.twp-secondary-anchor-text{
+        color: $color_secondary;
+        &:visited{
+            color: $color_secondary;
+        }
+    }
+    &.twp-primary-anchor-text{
+        color: $color_primary;
+        &:visited{
+            color: $color_primary;
+        }
+    }
+}
+.#{$prefix}-secondary-border{
+    @extend %secondary-border;
+}

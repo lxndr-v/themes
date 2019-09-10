@@ -1,0 +1,57 @@
+.#{$prefix}-site-branding{
+    text-align: center;
+    padding-bottom: 30px;
+    @include media(sm){
+        padding-top: 15px;
+    }
+    @include media(lg){
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
+    font-weight: $font_semi_bold;
+    a{
+        border: 0;
+        @include transition();
+        &:hover{
+            @include transform(scale(0.8));
+        }
+    }
+    @include media(lg){
+        padding-top: 75px;
+        padding-bottom: 90px;
+    }
+    .site-description,
+    .#{$prefix}-site-logo,
+    .site-title{
+        padding-top: 15px;
+        line-height: 1;
+        @include media(sm){
+            line-height: initial;
+        }
+    }
+    .#{$prefix}-site-logo{
+        .#{$prefix}-wrapper{
+            width: 150px;
+            margin: 0 auto;
+            @include media(lg){
+                width: initial;
+            }
+        }
+    }
+    .site-title{
+        margin: 0;
+        border: 0;
+        @include media(lg){
+            font-size: 4rem;
+        }
+        a{
+            &:hover{
+                font-size: 3rem;
+            }
+        }
+        
+    }
+    .site-description{
+        margin: 0;
+    }
+}

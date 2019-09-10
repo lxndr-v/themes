@@ -1,0 +1,77 @@
+%reset-ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+%clearfix{
+    &:after,
+    &:before{
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+%primary-bg{
+    background-color: $color_primary;
+}
+%secondary-bg{
+    background-color: $color_secondary;
+}
+%primary-border{
+    border-color: $color_primary;
+}
+%secondary-border{
+    border-color: $color_secondary;
+}
+%secondary-color{
+    color: $color_secondary;
+}
+
+
+%button{
+    display: inline-block;
+    height: 40px;
+    line-height: 36px;
+    @include border(2px,solid);
+    padding: 0 30px;
+    font-size: 1rem;
+    font-weight: $font_semi_bold;
+    font-family: inherit;
+}
+%box-image{
+    text-align: center;
+    img{
+        box-shadow: 0 0 5px 5px rgba($color_box_shadow,0.6);
+        border-radius: 5px;
+        padding: 15px;
+    }
+}
+
+%border-button-secondary{
+    border-color: $color_secondary;
+    color: $color_secondary;
+    background-color: $color_white;
+    &:hover{
+        background-color: $color_secondary;
+        color: $color_white;
+    }
+}
+%background-button-secondary{
+    border-color: $color_secondary;
+    background-color: $color_secondary;
+    color: $color_white;
+    border-color: $color_secondary;
+    &:visited{
+        color: $color_white;
+        border-color: $color_secondary;
+    }
+    &:hover{
+        background-color: $color_white;
+        color: $color_secondary;
+    }
+   
+}
+%perspective{
+    @include transform(perspective(1px) translateZ(0));
+}

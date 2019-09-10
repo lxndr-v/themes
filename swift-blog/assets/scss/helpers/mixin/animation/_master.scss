@@ -1,0 +1,9 @@
+@import 'scale';
+@import 'rotate'; 
+@import 'load';
+@mixin animation($animation){
+    -webkit-animation:$animation;
+    -o-animation:$animation;
+    -moz-animation:$animation;
+    animation:$animation;
+}

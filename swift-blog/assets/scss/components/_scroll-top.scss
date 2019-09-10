@@ -1,0 +1,36 @@
+#scroll-top{
+    display: none;
+    @include media(sm){
+       position: fixed;
+       z-index: 2;
+       right: -200px;
+       display: block;
+       bottom: 30px;
+
+   }
+   &.show{
+       right: 15px;
+       @include media(lg){
+           right: 30px;
+       }
+   }
+   span{
+       @extend %secondary-bg;
+       display: inline-block;
+       color: $color_white;
+       padding: 5px 10px;
+       font-size: 20px;
+       @include media(lg){
+           padding: 10px 15px;
+       }
+       i{
+           @include transition();
+       }
+       &:hover{
+            i{
+                @include transform(scale(1.2));
+            }
+       }
+   }
+
+}

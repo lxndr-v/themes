@@ -1,0 +1,15 @@
+@import 'comments-list';
+@import 'comments-response';
+@import 'form-input';
+.#{$prefix}-comments-section{
+  padding: 30px;
+  font-weight: $font_semi_bold;
+  margin-top: 30px;
+  @include border(2px,solid);
+  border-color: $color_box_shadow;
+ 
+  .comments-title{
+    margin: 0;
+  }
+
+}

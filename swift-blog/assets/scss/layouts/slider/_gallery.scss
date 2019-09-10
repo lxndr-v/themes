@@ -1,0 +1,84 @@
+.gallery{
+    &.gallery-columns-1{
+        margin-bottom: 0;
+        figure{
+            margin: 0;
+        }
+    }
+    .gallery-item{
+        padding: 5px;
+        margin: 0;
+        position: relative;
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: white;
+            background-color: rgba(0,0,0, 0.7);
+            padding: 5px 10px;
+            width: auto;
+            font-size: 1rem;
+            font-weight: $font_normal;
+        }
+    }
+} 
+figure{
+    a{
+        border: 0;
+    }
+}
+.wp-block-gallery{
+    li{
+        figure{
+            overflow: hidden;
+        }
+        img{
+            @include transition(transform,0.3s,linear);
+            @include backface();
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+        }
+    }
+    .blocks-gallery-item{
+        figure{
+            position: relative;
+            figcaption{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 5px 10px;
+                width: auto;
+                font-size: 1rem;
+                font-weight: $font_normal;
+            }
+        }
+    }
+}
+.wp-block-image{
+    overflow: hidden;
+    img{
+        @include transition(transform,0.3s,linear);
+        @include backface();
+        &:hover{
+            transform: scale(0.9,0.9);
+        }
+    }
+}
+.widget{
+    .gallery-caption{
+        display: none;
+    } 
+    .gallery{
+        &.slick-slider{
+            .gallery-item{
+                padding: 0;
+            }
+            .gallery-caption{
+                display: initial;
+            }
+        }
+    }
+} 

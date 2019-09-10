@@ -1,0 +1,31 @@
+.widget{
+    .calendar_wrap{
+        margin-top: 30px;
+        table{
+            border-collapse: collapse;
+            caption{
+                font-size: 1.3rem;
+                line-height: 1;
+                padding-bottom: $widget-padding;
+                font-weight: $font_semi_bold;
+            }
+            tbody{
+                tr{
+                    @include border-right();
+                    border-color: $color_light_gray;
+                    td{
+                        @include border-top();
+                        @include border-left();
+                        border-color: $color_light_gray;
+                        text-align: center;
+                    }
+                    &:last-child{
+                        @include border-bottom();
+                        border-color: $color_light_gray;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.widget{
+    ul{
+        @extend %reset-ul;
+        font-weight: $font_semi_bold;
+        li{
+            padding: $widget-padding 0;
+            @include border-bottom();
+            border-color: $color_light_gray;
+            
+            &:last-child{
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .sub-menu{
+                margin-top: 15px;
+                @include border-top();
+                border-color: $color_light_gray;
+                padding-left: 15px;
+                li{
+                    padding: 10px 0 10px 0;
+                    font-size: 0.8rem;  
+                    &.menu-item-has-children{
+                        padding-bottom: 0;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

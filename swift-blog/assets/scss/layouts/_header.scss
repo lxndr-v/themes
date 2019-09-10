@@ -1,0 +1,92 @@
+header{
+    &.site-header{
+        position: relative;
+        color: $color_white;
+        a{
+            color: $color_white;
+            &:visited,
+            &:hover{
+                color: $color_white;
+            }
+        }
+        .wp-custom-header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 100%;
+            z-index: 1;
+            video{
+                max-width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+            img{
+                height: 100%;
+                @include media(sm){
+                    height: initial;
+                }
+
+            }
+            button{
+                display: none;
+            }
+        }
+        .twp-nav-main-navigation,
+        .twp-site-branding{
+            position: relative;
+            z-index: 5;
+        }
+        .twp-nav-main-navigation{
+            &.sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                left: 0;
+                background-color: $color_black;
+                z-index: 9;
+                @include transition();
+
+                &:after{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    bottom: -7px;
+                    left: 0;
+                    height: 8px;
+                    background-color: $color_light_gray;
+                    width: 100%;
+                }
+            
+                #progressbar{
+                    position: absolute;
+                    left: 0;
+                    height: 8px;
+                    bottom: -7px;
+                    @extend %secondary-bg;
+                    z-index: 2;
+                    @include transition( width,0.2s,ease);
+                }
+              
+            }
+        }
+        &.twp-overlay{
+            &:before{
+                z-index: 2;
+            }
+        }
+
+    }
+}
+.admin-bar{
+    header{
+        &.site-header{
+            .twp-nav-main-navigation{
+                &.sticky{
+                    top: 30px;
+                }
+            }
+        }
+    }
+}

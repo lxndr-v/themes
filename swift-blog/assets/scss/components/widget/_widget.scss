@@ -1,0 +1,27 @@
+
+.widget-area{
+    .widget{
+        @include border;
+        border-color: $color_light_gray;
+        padding: 0 $widget-padding 30px;
+        select{
+            width: 100%;
+            margin-top: 30px;
+        }
+       
+    }
+}
+.widget{
+    h2,.widget-title{
+        margin-top: 30px;
+        margin-bottom: 0;
+        position: relative;
+        line-height: 1;
+        
+    }
+    &.widget_media_image{
+        img{
+            margin-top: 30px;
+        }
+    }
+}

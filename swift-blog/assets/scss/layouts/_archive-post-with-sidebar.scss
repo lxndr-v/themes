@@ -1,0 +1,29 @@
+.#{$prefix}-archive-post-list{
+   padding-bottom: 30px;
+    @include border-top();
+    border-color: $color_light_gray;
+    @include media(md){
+        padding-bottom: 60px;
+    }
+   
+    .twp-archive-post{
+        @include media(md){
+            padding-top: 30px;
+        }
+        
+        .twp-image-section,
+        .twp-content{
+            margin-top: 30px;
+            
+        }
+    }
+}
+    
+#secondary{
+    &.widget-area{
+        .widget{
+            margin-top: 0;
+            margin-bottom: 45px;
+        }
+    }
+}

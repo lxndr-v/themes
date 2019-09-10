@@ -1,0 +1,53 @@
+.#{$prefix}-archive-post{
+    position: relative;
+
+    .#{$prefix}-content,
+    .#{$prefix}-image-section{
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+    }
+   
+    .#{$prefix}-content{
+        .twp-wrapper{
+            @include media(lg){
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    &.#{$prefix}-archive-has-thumb{
+        @include media(lg){
+            display: flex;
+            flex-wrap: wrap;
+        }
+       
+        .#{$prefix}-image-section{
+            height: 250px;
+            @include media(sm){
+                height: 400px;
+            }
+            @include media(lg){
+                height: initial;
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+        }
+        .#{$prefix}-content{
+            .twp-wrapper{
+                width: 100%;
+                @include media(lg){
+                    padding: 30px 45px;
+                }
+            }
+            @include media(lg){
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+        }
+      
+    }
+    
+}

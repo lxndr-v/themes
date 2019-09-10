@@ -1,0 +1,15 @@
+html{
+    font-size: $root_font_size;
+    font-weight: $font_normal ;
+    body{
+        font-family: $root_font;
+        color: $color_black;
+    }
+}
+.twp-secondary-font,
+h1,h2,h3,h4,h5{
+    font-family: $secondary_font;
+}
+.twp-meta-font{
+    font-family: $meta_font; 
+}

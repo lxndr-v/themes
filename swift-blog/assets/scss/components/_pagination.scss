@@ -1,0 +1,99 @@
+.pagination{
+    text-align: center;
+    @include media(md){
+        padding-bottom: 30px;
+    }
+    .page-numbers{
+        @extend %button;
+        @extend %background-button-secondary;
+    
+    }
+    .prev,
+    .next{
+        &.page-numbers{
+            display: inline-block;
+        }  
+    }
+    .page-numbers{
+        @extend %button;
+        @extend %background-button-secondary;
+        margin-bottom: 30px;
+        display: none;
+        @include media(sm){
+            display: inline-block;
+        }
+        
+    }
+    
+}
+.posts-navigation{
+    text-align: center;
+    @include media(md){
+        padding-bottom: 30px;
+    }
+    .nav-links{
+        @extend %clearfix;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-previous,
+    .nav-next{
+        float: none;
+        width: initial;
+        padding: 0 30px;
+    }
+    a{
+        @extend %button;
+        @extend %background-button-secondary;
+    }
+    
+}
+.single{
+    .post-navigation{
+        .nav-links{
+            @extend %clearfix;
+            .nav-previous,
+            .nav-next{
+                width: 100%;
+                margin-top: 30px;
+                @include media(lg){
+                    width: 50%;
+                }
+                a{
+                    @extend %background-button-secondary;
+                    @include border(2px,solid);
+                    position: relative;
+                    display: inline-block;
+                    &:before,
+                    &:after{
+                        position: absolute;
+                        font-family: fontAwesome;
+            
+                    }
+                }
+            }
+        }
+        .nav-previous{
+            padding-left: 15px;
+            padding-right: 15px;
+            a{
+                padding: 15px 30px 15px 45px;
+                &:before{
+                    content: '\f060';
+                    left: 15px;
+                    top: 15px;
+                }
+            }
+        }
+        .nav-next{
+            a{
+                padding: 15px 45px 15px 30px;
+                &:after{
+                    content: '\f061';
+                    right: 15px;
+                    top: 15px;
+                }
+            }
+        }
+    }
+}

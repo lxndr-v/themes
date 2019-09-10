@@ -1,0 +1,42 @@
+.widget{
+    ul{
+        &.twp-tab{
+            display: flex;
+            margin-left: -15px;
+            margin-right: -15px;
+            li{
+                flex-grow: 1;
+                @include border-bottom();
+                @include border-right();
+                border-color: $color_light_gray;
+                text-align: center;
+                font-weight: $font_semi_bold;
+                padding: 0;
+                a{
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    padding: 10px;
+                    &.active{
+                        @extend %primary-bg;
+                    }
+                }
+                &:last-child{
+                    border-right: 0;
+                    @include border-bottom();
+                    border-color: $color_light_gray;
+                }
+               
+            }
+        }
+    }
+    .#{$prefix}-tab-content{
+        padding-top: $widget-padding;
+        .tab-pane{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

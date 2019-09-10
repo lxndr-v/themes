@@ -1,0 +1,30 @@
+.twp-footer-widget{
+    padding-top: 30px;
+    @include border-top();
+    @include border-bottom();
+    border-color: $color_light_gray;
+    li{
+        &:first-child{
+            padding-top: 0;
+        }
+        ul{
+            padding-left: 15px;
+            li{
+                &:first-child{
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    .widget-title{
+        margin-bottom: 30px;
+    }
+    @include media(md){
+        padding-bottom: 60px;
+        padding-top: 30px;
+    }
+    @include media(lg){
+        padding-bottom: 90px;
+        padding-top: 60px;
+    }
+}

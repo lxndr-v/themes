@@ -1,0 +1,15 @@
+.#{$prefix}-footer-menu{
+    ul{
+        @extend %reset-ul;
+        li{
+            display: inline-block;
+            a{
+                padding: 15px 15px 0;
+                display: inline-block;
+                font-size: 0.8rem;
+                font-weight: $font_semi_bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

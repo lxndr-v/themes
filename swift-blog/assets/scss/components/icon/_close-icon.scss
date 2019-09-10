@@ -1,0 +1,41 @@
+$close-icon-lg-size: 60px;
+$close-icon-default-size: 30px;
+
+.#{$prefix}-close-icon{
+    width: $close-icon-default-size;
+    height: $close-icon-default-size;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    @include transition();
+    &:hover{
+        @include animation(rotate-center 0.3s linear both);
+    }
+    span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        z-index: 5;
+        top: 50%;
+        border-radius: 5px;
+        @extend %primary-bg;
+        transform :rotate(45deg);
+       
+        &:last-child{
+            transform:rotate(135deg);
+        }
+      
+    }
+    &.#{$prefix}-close-icon-lg{
+        width: $close-icon-lg-size;
+        height: $close-icon-lg-size;
+    }
+    
+    &.#{$prefix}-close-icon-white{
+        span{
+            background-color: $color_white;
+        }
+    }
+          
+}  

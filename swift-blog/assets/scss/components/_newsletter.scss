@@ -1,0 +1,92 @@
+.twp-newsletter-section{
+    text-align: center;
+}
+.#{$prefix}-newsletter-subscriber{
+    background-color: $color_black;
+    color: $color_white;
+    min-height: 300px;
+    .#{$prefix}-description{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        .#{$prefix}-title{
+            margin-top: 15px;
+            margin-bottom: 0;
+            @include media(lg){
+                font-size: 2.5rem;
+            }
+        }
+        p{
+            margin-top: 15px;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+        }
+       
+       
+    }
+    
+}
+.mc4wp-form-fields{
+    input[type=email]{
+        @include border(2px,solid);
+        border-color: rgb(238,238,238);
+        padding: 0 15px;
+        font-family: inherit;
+        height: 40px;
+        line-height: 36px;
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 15px;
+        border-radius: 0;
+        @include media(sm){
+            width: 60%;
+            margin-bottom: 0;
+        }
+    }
+    input[type=submit]{
+        @extend %button;
+        border-radius: 0;
+        @include transition();
+        color: $color_black;
+        @extend %primary-bg;
+        border-color: transparent;
+        @include transition();
+        &:hover{
+            background-color: $color_white;
+            @extend %primary-border;
+        }
+    }
+    
+    input[type=checkbox]{
+        display: inline-block;
+        margin-right: 5px;
+        position: relative;
+        top: 1px;
+    }
+
+}
+.widget{
+    .mc4wp-form-fields{
+        input[type=email]{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        p{
+            margin-bottom: 0;
+            margin-top: 30px;
+        }
+    }
+}
+.twp-mobile-menu-section{
+    .mc4wp-form-fields{
+        input[type=email]{
+            @include media(sm){
+                width: 60%;
+                margin-bottom: 0;
+            }
+        }
+     
+    }   
+}

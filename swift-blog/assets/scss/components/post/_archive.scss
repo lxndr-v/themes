@@ -1,0 +1,15 @@
+.#{$prefix}-archive-post{
+    .#{$prefix}-content{
+        .twp-category,
+        .entry-title,
+        p,
+        .#{$prefix}-author-meta{
+            margin-bottom: 15px;
+        }
+        .entry-title,p{
+            margin-top: 0;
+        }
+       
+    }
+  
+}

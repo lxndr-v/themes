@@ -1,0 +1,93 @@
+
+
+.twp-preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: $color_white;
+   .status{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+   }
+
+    .#{$prefix}-circle {
+        width: 40px;
+        height: 40px;
+        @extend %secondary-bg;
+        border-radius: 50%;
+        offset-path: path("M0,0a72.5,72.5 0 1,0 145,0a72.5,72.5 0 1,0 -145,0");
+        offset-rotate: 0deg;
+        position: relative;
+        transform: scale(1.5);
+        &.#{$prefix}-circle-1 {
+            width: 30px;
+            height: 30px;
+            @extend %primary-bg;
+        }
+        
+        &.#{$prefix}-circle-2 {
+            width: 25px;
+            height: 25px;
+            @extend %secondary-bg;
+            left: -30px;
+        }
+        
+        &.#{$prefix}-circle-3 {
+            width: 20px;
+            height: 20px;
+            @extend %primary-bg;
+            left: -55px;
+        }
+        
+        &.#{$prefix}-circle-4 {
+            width: 15px;
+            height: 15px;
+            @extend %secondary-bg;
+            left: -75px;
+        }
+    }
+    @for $i from 1 through 4 {
+        .#{$prefix}-circle-#{$i} {
+            @include animation(load 1.8s cubic-bezier(0.860, 0.000, 0.070, 1.000) infinite);
+            animation-delay: 0.147s * $i;
+            -moz-animation-delay: 0.147s * $i;
+            -webkit-animation-delay: 0.147s * $i;
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            z-index: 100 - $i;
+        }
+    }
+    &.#{$prefix}-preloader-mozilla{
+        .twp-circle-moz{
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            &:first-child{
+                float: left;
+                @include animation( animation-x 1s cubic-bezier(0.445, 0.100, 0.550, 0.900) infinite );
+                @extend %primary-bg;
+            }
+            &:last-child{
+                float: right;
+                @include animation( animation-y 1s cubic-bezier(0.445, 0.100, 0.550, 0.900) infinite );
+                @extend %secondary-bg;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

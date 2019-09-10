@@ -1,0 +1,8 @@
+.site-footer{
+    .twp-newsletter-subscriber,
+    .twp-site-copyright-section{
+        @include media(md){
+            margin-top: 60px;
+        }
+    }
+}

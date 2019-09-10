@@ -1,0 +1,46 @@
+.twp-single-page-author-section{
+    .twp-single-post-author,
+    .entry-header{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .twp-single-post-author{
+        text-align: center;
+        @include media(lg){
+            flex:  0 0 200px;
+            max-width: 200px;
+            text-align: initial;
+        }
+        a{
+            border: 0;
+            @include transition();
+            &:hover{
+                @include transform(scale(0.9));
+            }
+        }
+        .twp-caption{
+            padding-top: 15px;
+            font-size: 20px;
+        }
+    }
+    .entry-header{
+        margin-top: 30px;
+        @include media(lg){
+            margin-top: 0;
+            flex:  0 0 calc(100% - 200px);
+            max-width: calc(100% - 200px);
+        }
+    }
+    .single-content-experpt{
+        padding: 5px 15px;
+        margin: 10px 15px 0;
+        @include border-left(3px,solid);
+        @extend %secondary-border;
+        @include media(lg){
+            margin: 10px 30px 0;
+        }
+    }
+    
+}

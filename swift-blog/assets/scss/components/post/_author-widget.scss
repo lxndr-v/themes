@@ -1,0 +1,33 @@
+.twp-author-widget{
+    .twp-image-section{
+        flex: 0 0 100px;
+        max-width: 100px;
+        padding-top: 30px;
+        .twp-wrapper{
+            border-radius: 100%;
+            height: 100px;
+            width: 100%;
+
+        }
+    }
+    .twp-d-flex{
+        align-items: center;
+    }
+    .twp-inner-title{
+        flex: 0 0 calc( 100% - 100px );
+        max-width: calc( 100% - 100px );
+        padding-left: 30px;
+    } 
+    p{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .#{$prefix}-social{
+        text-align: center;
+        span{
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+    }
+}

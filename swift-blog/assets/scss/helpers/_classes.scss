@@ -1,0 +1,61 @@
+.clearfix{
+    @extend %clearfix;
+}
+.#{$prefix}-float-left{
+    float: left;
+}
+.#{$prefix}-float-right{
+    float: right;
+}
+.#{$prefix}-d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.data-bg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color_light_gray;
+}
+.#{$prefix}-overlay{
+    position: relative;
+    z-index: 1;
+    @extend %perspective;
+    &:before{
+        position: absolute;
+        content: '';
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba($color_black,0.5);
+        z-index: -1;
+
+    }
+  
+}
+.#{$prefix}-text-center{
+    text-align: center;
+}   
+.d-block{
+    display: block;
+    width: 100%;
+}
+.#{$prefix}-inline-block{
+    display: inline-block;
+}
+.#{$prefix}-block{
+    display: block;
+}
+.#{$prefix}-btn-transparent{
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: inherit;
+}

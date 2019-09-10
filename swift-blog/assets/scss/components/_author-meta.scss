@@ -1,0 +1,26 @@
+.twp-author-meta{
+    margin-right: -5px;
+    margin-left: -5px;
+    span{
+        display: inline-block;
+    }
+    .twp-author,
+    .twp-posts-date,
+    .twp-post-comment{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .twp-author{
+        .twp-caption{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    .twp-posts-date{
+        span{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+
+}

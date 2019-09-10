@@ -1,0 +1,15 @@
+.#{$prefix}-related-post{
+    .#{$prefix}-image-section{
+        height: 300px;
+        a{
+            border: 0;
+        }
+    }
+    .#{$prefix}-author-meta{
+        padding-top: 15px;
+    }
+    h3{
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}

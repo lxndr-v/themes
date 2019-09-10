@@ -1,0 +1,11 @@
+
+@include keyframes ( scale-in-center ){
+    0% {
+        @include transform(scale(0));
+        opacity: 1;
+    }
+    100% {
+        @include transform(scale(1));
+        opacity: 1;
+    }
+}

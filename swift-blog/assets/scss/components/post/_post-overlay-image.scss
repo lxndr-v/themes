@@ -1,0 +1,42 @@
+.#{$prefix}-overlay-image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  
+    border: 0;    
+    &.#{$prefix}-overlay{
+        &:before{
+            content: none;
+        }
+    }
+    .twp-post-format-icon-rounded{
+        &.twp-post-format-no-hover-effect{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            @include transition(opacity,0.5s,ease);
+        }
+        &.twp-post-format-icon-hover-effect{
+            opacity: 0;
+        }
+    }
+    
+  
+    &:hover{
+        &.#{$prefix}-overlay{
+            &:before{
+                content: '';
+                @include animation(scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+            }
+        }
+        .twp-post-format-icon-rounded{
+            &.twp-post-format-no-hover-effect{
+                opacity: 0;
+            }
+            &.twp-post-format-icon-hover-effect{
+                @include animation(scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+            }
+        }
+    
+    }
+}

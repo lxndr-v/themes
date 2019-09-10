@@ -1,0 +1,104 @@
+$tag-line-width: 60px;
+%primary-title{
+    position: relative;
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 1.4rem;
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: $tag-line-width;
+            height: 3px;
+            @include transform(translateY(-50%));
+        }
+       
+        &:after{
+            right: -$tag-line-width;
+            @extend %primary-bg;
+        }
+}
+.#{$prefix}-tag-line{
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    &:before,
+    &:after{
+        content: none;
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: $tag-line-width;
+        height: 3px;
+        @include transform(translateY(-50%));
+        @include media(sm){
+            content: '';
+        }
+    }
+    &:before{
+        left: -$tag-line-width;
+    }
+    &:after{
+        right: -$tag-line-width;
+    }
+    &.#{$prefix}-tag-line-primary{
+        &:after,
+        &:before{
+            @extend %primary-bg; 
+        }
+    }
+    &.#{$prefix}-tag-line-white{
+        &:after,
+        &:before{
+           background-color: $color_white;
+        }
+    }
+}
+
+.widget,
+.page-header{
+    .widget-title,
+    .page-title{
+        @extend %primary-title;
+    }
+}
+.twp-primary-title{
+    @extend %primary-title;
+}
+.page-header{
+    .page-title{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+.#{$prefix}-pagination-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 10px;
+    line-height: 1;
+    a{
+        border: 0;
+    }
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        @extend %primary-bg;
+        @include transition();
+    }
+    i{
+        padding-left: 15px;
+    }
+    &:hover{
+       &:after{
+           @extend %secondary-bg;
+       }
+    }
+}

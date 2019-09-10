@@ -1,0 +1,24 @@
+.twp-top-border{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    @include border-top(3px,solid);
+    @include border-left(3px,solid);
+    border-top-color: $color_primary;
+    border-left-color: $color_secondary;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.twp-bottom-border{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    @include border-bottom(3px,solid);
+    @include border-right(3px,solid);
+    border-bottom-color: $color_primary;
+    border-right-color: $color_secondary;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

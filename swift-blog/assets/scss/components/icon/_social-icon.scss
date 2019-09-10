@@ -1,0 +1,92 @@
+
+
+$social_icon: (
+    twitter:    (content: "\f099", color: #1ca0fe),
+    facebook:   (content: "\f09a",color: #3b5999),
+    dribbble :  (content:"\f22d",color: #ea4c89),
+    linkedin :  ( content: "\f0e1",color: #0177b5),
+    instagram:  (content: "\f16d",color:#E1306c),
+    youtube:    (content: "\f167",color: #ff0000),
+    vimeo:      (content: "\f245",color: #1ab7ea),
+    wordpress:  (content: "\f19a",color: #0074aa),
+    pinterest: (content: "\f0d2",color: #bd071c),
+    tumblr: (content: "\f173",color:#3e5a70),
+    whatsapp: (content: "\f232",color: #00e676),
+    reddit : (content: "\f1a1",color: #ff4500),
+    vk: (content: "\f189",color: #4a76a8)
+);
+
+ul{
+    &.#{$prefix}-social-icons{
+        @extend %reset-ul;
+        @extend %clearfix;
+        li{
+            float: left;
+            &:last-child{
+                margin-left: 0;
+            }
+            a{
+                display: inline-block;
+                padding: 0 10px;
+                text-decoration: none;
+                // color: $color_black;
+                border: 0;
+                &:visited{
+                    // color: $color_black;
+                }
+               
+                span{
+                    display: none;
+                }
+                &:before{ 
+                    display: block;
+                    font-family: fontAwesome;
+                    font-size: 20px;
+                    @include transition();
+                }
+               
+                @each $social,$icon in $social_icon{
+                    &[href*="#{$social}"] {
+                        &:before {
+                            content: map-get($icon, content);
+                        }
+                    }
+                    &:hover{
+                        &[href*="#{$social}"] {
+            
+                            &:before {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+               
+            }
+            
+
+        }
+        &.twp-social-icons-with-tooltip{
+            li{
+                text-align: center;
+                a{
+                    span{
+                        display: block;
+                        padding-top: 5px; 
+                    }
+                    &:hover{
+                        // color: $color_primary;
+                    }
+                }
+            }
+        }
+        &.#{$prefix}-social-icons-white{
+            a{
+                color: $color_white;
+                &:visited{
+                    color: $color_white;
+                }
+            }
+
+        }
+    }
+}
